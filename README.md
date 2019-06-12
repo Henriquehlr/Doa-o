@@ -3,7 +3,7 @@ Software para cadastro e doação  de Animais
 
 Desenvolvimento em Interface: javax.swing
 
-Banco de dados em ArrayList
+ArrayList
 
 Programação em Orientada a Objetos
 
