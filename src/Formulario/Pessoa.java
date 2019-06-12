@@ -1,14 +1,36 @@
 
 package Formulario;
 
-
+// Herança
 public class Pessoa extends Adotante{
   
     public String cpf;
     public String rg;
     public String genero;
     public String cnpj;
+    private String uso;
     
+    
+    
+    public Pessoa(){
+        this.cpf = "11778589677";
+        this.rg = "MG-18789";
+        
+    }
+    
+    //Polimorfismo SObre Posição
+    public Pessoa(String genero, String cpf){
+        this.genero = genero;
+        this.cpf = cpf ;
+    }
+    
+    public Pessoa(String genero, String cpf, String uso){
+         this.genero = genero;   
+         this.cpf = cpf;
+         this.uso = uso;
+        
+    }
+        
     public String getCnpj() {
         return cnpj;
     }

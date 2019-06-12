@@ -1,7 +1,7 @@
 
 package Formulario;
 
-public class Animal {
+public class  Animal {
     
     public Raça r;
     private String nome;
@@ -16,10 +16,27 @@ public class Animal {
     private String Observação;
     private String Peso;
     private String Castrado;
-    
+   
+    //Class Abstrata
+//    abstract class animal{
+//        
+//        private String animal;
+//
+//        public String getAnimal() {
+//            return animal;
+//        }
+//
+//        public void setAnimal(String animal) {
+//            this.animal = animal;
+//        }
+//        
+//        public abstract void imprimeAnimal();
+//        
+//    }
     public Animal(){
-        //Composição
+        //Associação
         r = new Raça();
+        
     }
 
     public String getCastrado() {
@@ -79,7 +96,7 @@ public class Animal {
     public void setDeficiencia(String Deficiencia) {
         this.Deficiencia = Deficiencia;
     }
-////alt + insert gerar get e setters
+
     public String getNome() {
         return nome;
     }

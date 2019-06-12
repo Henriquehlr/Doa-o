@@ -1,6 +1,8 @@
 
 package Formulario;
 
+
+//Herança
 public class Endereco extends Adotante{
                 
         public String rua;
@@ -9,6 +11,30 @@ public class Endereco extends Adotante{
         public String bairro;
         public String cidade;
         public String estado;
+        
+        //Polimorfismo Sobre Carga
+        public String confere;
+        public String a;
+    
+    public String Confere(String cidade){
+       return  cidade;
+       }
+
+    public String getConfere() {
+        return confere;
+    }
+
+    public void setConfere(String confere){
+        this.confere = getCidade()+", "+getEstado();
+    }
+       
+     
+    
+    public String Confere(String cidade, String estado){
+       return  cidade+estado;
+       
+       
+     }
 
     public String getRua() {
         return rua;
