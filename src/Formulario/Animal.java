@@ -17,27 +17,28 @@ public class  Animal {
     private String Peso;
     private String Castrado;
    
-    //Class Abstrata
-//    abstract class animal{
-//        
-//        private String animal;
-//
-//        public String getAnimal() {
-//            return animal;
-//        }
-//
-//        public void setAnimal(String animal) {
-//            this.animal = animal;
-//        }
-//        
-//        public abstract void imprimeAnimal();
-//        
-//    }
+    
     public Animal(){
-        //Associação
+        //Associação0
         r = new Raça();
+         } //{
+    
         
-    }
+            
+//           // classe abstract
+//    //@Override    
+//    public void imprimeRaça() {
+//        System.out.println("### Imprime Animal ###");
+//         
+//         
+//        System.out.println("Saldo: "+this.Origem);
+//        
+//        
+//        
+//        }
+        
+        
+      
 
     public String getCastrado() {
         return Castrado;

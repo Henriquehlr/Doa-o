@@ -10,6 +10,8 @@ public class Adotante {
     private String TelefoneCelular;
     private String Email;
     
+    
+    
     public Endereco getE() {
         return e;
     }

@@ -70,13 +70,13 @@ public class Principal extends javax.swing.JFrame {
     
      public void listdoa(){
         String dados[][] = new String[adocao.size()][];
-        String[] colunas = new String[]{"Nome Adotante", "Nome Animal", "Data","Endereço"};
+        String[] colunas = new String[]{"Nome Adotante", "Nome Animal", "Data","Endereço","Dados Pessoal"};
         
         int key = 0;
         for(Adocao a : adocao){
             String[] ne = new String[]{"a", "a"};
             System.out.println ("\n ff \n "+a.toString()+"\n"); 
-            dados[key] = new String[] {a.getAdotante().getNome(), a.getAnimal().getNome(), a.getAnimal().getDataResgate(),a.getAdotante().e.getConfere()};
+            dados[key] = new String[] {a.getAdotante().getNome(), a.getAnimal().getNome(), a.getAnimal().getDataResgate(),a.getAdotante().e.getConfere(),a.getAdotante().p.getB()};
             key++;
         }
         
@@ -172,6 +172,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
+        jToolBar1 = new javax.swing.JToolBar();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -852,6 +853,8 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(83, 83, 83))
         );
 
+        jToolBar1.setRollover(true);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Lista Animais");
         setBackground(new java.awt.Color(51, 0, 51));
@@ -1186,6 +1189,8 @@ public class Principal extends javax.swing.JFrame {
         p.setCpf(this.txtCpf.getText());
         p.setGenero(this.txtGenero.getName());
         p.setRg(this.txtRG.getText());
+        p.setB(this.txtCpf.getText());
+        p.setB(this.txtRG.getText());
      
         a.setP(p);
         adotantes.add(a);
@@ -1280,16 +1285,12 @@ public class Principal extends javax.swing.JFrame {
         adoco.setAnimal(novoA);
         System.out.println(novoA.getNome());
         System.out.println("adotado com sucesso\n\n");
-        this.adocao.add(adoco);
+        //this.adocao.add(adoco);
         for(Adocao ado : adocao){
         System.out.println("adotante:" + ado.getAdotante().getNome()+"animal"+ado.getAnimal().getNome());    
         }
-        jFrame3.setVisible(false);
-        
-        
-        
-        
-        
+        //jFrame3.setVisible(false);
+          
         adocao.add(adoco);
         jFrame3.setVisible(false);
         listdoa();
@@ -1330,7 +1331,8 @@ public class Principal extends javax.swing.JFrame {
             }
         });
     }
-
+    
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnExcluir;
     private javax.swing.JButton jButton1;
@@ -1403,6 +1405,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToolBar jToolBar1;
     private javax.swing.JTable listaAnimais;
     private javax.swing.JTable listaAnimais1;
     private javax.swing.JTable listdoação1;

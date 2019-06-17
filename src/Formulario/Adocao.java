@@ -6,7 +6,7 @@ public class Adocao {
     private Animal animal;
     private Adotante adotante;
     
-
+    //Emcapsulamento
     public String getData() {
         return data;
     }

@@ -9,6 +9,9 @@ public class Pessoa extends Adotante{
     public String genero;
     public String cnpj;
     private String uso;
+    private String b;
+    private String a;
+    private String x;
     
     
     
@@ -19,16 +22,18 @@ public class Pessoa extends Adotante{
     }
     
     //Polimorfismo SObre Posição
-    public Pessoa(String genero, String cpf){
-        this.genero = genero;
-        this.cpf = cpf ;
+    public Pessoa(String x, String a, String b){
+         this.x = rg;   
+         this.a = cpf;    
+         this.b = a+x;
     }
-    
-    public Pessoa(String genero, String cpf, String uso){
-         this.genero = genero;   
-         this.cpf = cpf;
-         this.uso = uso;
-        
+
+    public String getB() {
+        return b;
+    }
+
+    public void setB(String b) {
+        this.b = getRg()+", "+getCpf();
     }
         
     public String getCnpj() {
