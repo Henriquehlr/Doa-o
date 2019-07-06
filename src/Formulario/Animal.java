@@ -1,7 +1,7 @@
 
 package Formulario;
 
-public class  Animal {
+public abstract class  Animal {
     
     public Raça r;
     private String nome;
@@ -21,25 +21,10 @@ public class  Animal {
     public Animal(){
         //Associação0
         r = new Raça();
-         } //{
+         } 
+   //abstract
+   public abstract String setExpctativaVida(String ExpectativaVida);
     
-        
-            
-//           // classe abstract
-//    //@Override    
-//    public void imprimeRaça() {
-//        System.out.println("### Imprime Animal ###");
-//         
-//         
-//        System.out.println("Saldo: "+this.Origem);
-//        
-//        
-//        
-//        }
-        
-        
-      
-
     public String getCastrado() {
         return Castrado;
     }

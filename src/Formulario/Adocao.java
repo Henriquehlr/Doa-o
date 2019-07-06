@@ -1,10 +1,14 @@
 
 package Formulario;
 
+
 public class Adocao {
     private String data; 
     private Animal animal;
     private Adotante adotante;
+    
+    
+    
     
     //Emcapsulamento
     public String getData() {
@@ -30,6 +34,8 @@ public class Adocao {
     public void setAdotante(Adotante adotante) {
         this.adotante = adotante;
     }
+
+    
     
     
 }

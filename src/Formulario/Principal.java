@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 
 public class Principal extends javax.swing.JFrame {
     
+       
     List<Animal> animal = new ArrayList<>();
     
     List<Adotante> adotantes = new ArrayList<>();
@@ -27,15 +28,12 @@ public class Principal extends javax.swing.JFrame {
         setExtendedState(MAXIMIZED_BOTH);
     }
     
-    
+      
 //    Método responsavel por buscar no banco de dados
 //    a lista de animais cadastrados
 //    e preencher a tabela listAnimais
     
-    private void pesquisar(){
-        
-      }
-    
+  
  public void listadot(){
      String dados[][] = new String[adotantes.size()][];
         String[] colunas = new String[]{"Nome","Telefone Fixo","Telefone Celular","Email","Rua","Número","Cep","Bairro","Cidade","Estado","Cpf","Rg","Genero","Cnpj"};
@@ -199,6 +197,8 @@ public class Principal extends javax.swing.JFrame {
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jFrame1.setTitle("Lista Animais");
+        jFrame1.setExtendedState(10);
+        jFrame1.setMaximizedBounds(new java.awt.Rectangle(1, 1, 1, 1));
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Inicio/Imagem/icons8-mais-filled-48.png"))); // NOI18N
         jButton5.setText("Salvar");
@@ -520,6 +520,8 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jFrame2.setTitle("Cadastro Adotante");
+
         txtnomeadotante.setText("Henrique");
         txtnomeadotante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -827,11 +829,11 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel44)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addGroup(jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel45)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85))
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45))
+                .addGap(103, 103, 103))
             .addGroup(jFrame3Layout.createSequentialGroup()
                 .addGap(99, 99, 99)
                 .addComponent(jButton6)
@@ -1101,8 +1103,18 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_novo
 
     private void jButton5save(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5save
+        
+        Animal n = new Animal() {
 
-        Animal n = new Animal();
+            public String setTemperamento(String Temperamento) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public String setExpctativaVida(String ExpectativaVida) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         
         
         n.setNome(this.textNome.getText());
@@ -1261,7 +1273,16 @@ public class Principal extends javax.swing.JFrame {
         String ad = jTextField1.getText();
         String an = jTextField2.getText();
         
-        Animal novoA = new Animal();
+        Animal novoA = new Animal() {
+
+
+            @Override
+            public String setExpctativaVida(String ExpectativaVida) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+        };
+        
         Adotante novoAd = new Adotante();
         
         for(Animal a : animal){

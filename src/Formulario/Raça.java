@@ -1,9 +1,6 @@
 
 package Formulario;
 
-
-//classeabstract
-//abstract class Raça
 public class Raça{
     
    public String Origem;
@@ -43,11 +40,7 @@ public class Raça{
 
     public void setTemperamento(String Temperamento) {
         this.Temperamento = Temperamento;
+    
+  
     }
-    
-    //public abstract void imprimeRaça();
-   
-   
-   
-    
-}
+ }
